@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>README</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}.CodeMirror { height: auto; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
+.CodeMirror-lines { padding: 4px 0px; }
+.CodeMirror pre { }
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-color: rgb(247, 247, 247); white-space: nowrap; }
+.CodeMirror-linenumbers { }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.CodeMirror div.CodeMirror-cursor { border-left-width: 1px; border-left-style: solid; border-left-color: black; z-index: 3; }
+.CodeMirror div.CodeMirror-secondarycursor { border-left-width: 1px; border-left-style: solid; border-left-color: silver; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; background-color: rgb(119, 238, 119); z-index: 1; background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
+.cm-tab { display: inline-block; }
+.cm-s-default .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-default .cm-atom { color: rgb(34, 17, 153); }
+.cm-s-default .cm-number { color: rgb(17, 102, 68); }
+.cm-s-default .cm-def { color: rgb(0, 0, 255); }
+.cm-s-default .cm-variable { color: black; }
+.cm-s-default .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-default .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-default .cm-property { color: black; }
+.cm-s-default .cm-operator { color: black; }
+.cm-s-default .cm-comment { color: rgb(170, 85, 0); }
+.cm-s-default .cm-string { color: rgb(170, 17, 17); }
+.cm-s-default .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-default .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-default .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-default .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-default .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-default .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-default .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-default .cm-header { color: blue; }
+.cm-s-default .cm-quote { color: rgb(0, 153, 0); }
+.cm-s-default .cm-hr { color: rgb(153, 153, 153); }
+.cm-s-default .cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: bold; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-s-default .cm-error { color: rgb(255, 0, 0); }
+.cm-invalidchar { color: rgb(255, 0, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.CodeMirror-activeline-background { background-color: rgb(232, 242, 255); background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; background-color: transparent; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: -webkit-fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-widget { }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.CodeMirror-selected { background-color: rgb(217, 217, 217); background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror-focused .CodeMirror-selected { background-color: rgb(215, 212, 240); background-position: initial initial; background-repeat: initial initial; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror span { }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+html { font-size: 14px; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow-x: hidden; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+img { max-width: 100%; }
+input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { page-break-inside: avoid; page-break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; page-break-inside: auto; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.show-fences-line-number pre.md-fences { padding-left: 0px; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences, pre.md-fences { font-size: 0.9rem; display: block; page-break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences .CodeMirror.cm-s-default.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.footnotes { color: rgb(136, 136, 136); font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+#write pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+.md-toc-h6 { margin-left: 12em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 8em; }
+  .md-toc-h6 { margin-left: 9.5em; }
+}
+a.md-toc-inner { color: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; text-decoration: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: '.'; }
+.md-tag { opacity: 0.5; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-header-anchor.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-width: 0px; min-height: 0px; width: 100%; display: block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { -webkit-transition: none; transition: none; }
+
+
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: normal; src: local(Open Sans Regular), url(file:///Users/lifengshuang/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff) format(woff); }
+@font-face { font-family: 'Open Sans'; font-style: italic; font-weight: normal; src: local(Open Sans Italic), url(file:///Users/lifengshuang/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff) format(woff); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: bold; src: local(Open Sans Bold), url(file:///Users/lifengshuang/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff) format(woff); }
+@font-face { font-family: 'Open Sans'; font-style: italic; font-weight: bold; src: local(Open Sans Bold Italic), url(file:///Users/lifengshuang/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff) format(woff); }
+html { font-size: 16px; }
+body { font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+#write { max-width: 800px; margin: 0px auto; padding: 20px 30px 40px; }
+#write::after { height: 80px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; -webkit-font-smoothing: antialiased; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; }
+table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white; margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); }
+pre.md-fences, .md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; font-family: Consolas, 'Liberation Mono', Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+pre.md-fences, .md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) { 
+}
+@media print { 
+  table, pre { page-break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714286rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714286rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714286rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; font-family: Consolas, 'Liberation Mono', Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write' class = 'is-mac'><h1><a name='header-c1' class='md-header-anchor '></a>Project 1: 斗兽棋</h1><p><img src='https://cloud.githubusercontent.com/assets/6532225/18883792/44b26bbe-8517-11e6-8f14-896c01d77724.png' alt='' /></p><h2><a name='header-c8' class='md-header-anchor '></a>项目目标</h2><p>本项目中，同学们需要使用 Java 编程语言，结合课堂知识、lab 内容，实现一个简单的、可以在命令行下玩的斗兽棋游戏，并按要求编写一份开发文档，介绍你的实现方式、开发思路等内容。</p><p>关于项目有任何疑问，可以在 Issue 中提出：<a href='https://github.com/java-a/project1/issues'>github.com/java-a/project1/issues</a>。</p><h2><a name='header-c13' class='md-header-anchor '></a>项目参考</h2><h3><a name='header-c14' class='md-header-anchor '></a>游戏参考：</h3><p>斗兽棋是一款小众益智游戏，游戏规则在不同版本中各有差别。</p><p>在本项目中，我们使用<code>野兽争霸斗兽棋</code>的游戏规则（链接：<a href='www.doushouqi.net' target='_blank' >www.doushouqi.net</a> ）。</p><p>对游戏不熟悉的同学可以在网页中进行几盘游戏来熟悉规则。</p><p>另附包含单人模式的<code>野兽争霸斗兽棋</code>链接：<a href='http://flash.7k7k.com/cms/cms10/20120717/1546039028/95197/index.html' target='_blank' >http://flash.7k7k.com/cms/cms10/20120717/1546039028/95197/index.html</a> 。</p><h3><a name='header-c23' class='md-header-anchor '></a>Project 1 样例：</h3><blockquote><p>Project 1 只要求完成命令行版的斗兽棋。
+Project 2 将完成图形化界面。</p></blockquote><p>在 Project 1 中，同学们需要完成的项目样例是 <code>example</code> 文件夹下的 <code>Jungle.jar</code> 。</p><p>运行方式：</p><ol><li>下载至自己电脑中。</li><li>在 <code>example</code> 文件夹中打开命令行。</li><li>运行命令 <code>java -jar Jungle.jar</code> 。</li></ol><h2><a name='header-c43' class='md-header-anchor '></a>项目实现</h2><h3><a name='header-c44' class='md-header-anchor '></a>一、地图的读取和输出</h3><p>斗兽棋的基本要素是地图。我们首先需要完成地图的读取，并在命令行中输出地图。</p><h4><a name='header-c47' class='md-header-anchor '></a>地图读取</h4><p>斗兽棋的地图横七列，纵九行。地图分为地形地图和动物地图。</p><p>我们通过读取地图文件的方式来载入地图。</p><h5><a name='header-c52' class='md-header-anchor '></a>地形地图（tile.txt）：</h5><pre class='md-fences mock-cm' style='display:block;position:relative'>000000000
+000111000
+200111004
+320000045
+200111004
+000111000
+000000000</pre><table><thead><tr><th>数字</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>含义</td><td>空地</td><td>小河</td><td>左方陷阱</td><td>左方兽穴</td><td>右方陷阱</td><td>右方兽穴</td></tr></tbody></table><h5><a name='header-c71' class='md-header-anchor '></a>动物地图（animal.txt）：</h5><p>动物地图记录了动物的初始位置。</p><pre class='md-fences mock-cm' style='display:block;position:relative'>608000107
+020000040
+003000500
+000000000
+005000300
+040000020
+701000806</pre><table><thead><tr><th>数字</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>含义</td><td>无动物</td><td>鼠</td><td>猫</td><td>狼</td><td>狗</td><td>豹</td><td>虎</td><td>狮</td><td>象</td></tr></tbody></table><h5><a name='header-c98' class='md-header-anchor '></a>地图读取方式：</h5><p>以地形地图为例，我们将 <code>tile.txt</code> 放到项目根目录下(在 IntelliJ IDEA 中，放到与 <code>src</code> 同级的目录下)。</p><p>首先，使用 <code>Scanner</code> 类来读取文件：</p><pre class="md-fences"> <div class="CodeMirror cm-s-default cm-s-inner CodeMirror-wrap"><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 22px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=""><span style="padding-right: 0.1px;"><span class="cm-variable">Scanner</span> <span class="cm-variable">scanner</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Scanner</span>(<span class="cm-keyword">new</span> <span class="cm-variable">File</span>(<span class="cm-string">"tile.txt"</span>));</span></pre></div></div></div></div></div></div></div></pre><p>然后，使用 <code>Scanner</code> 的 <code>nextLine()</code> 方法获取文件内容：</p><pre class="md-fences"> <div class="CodeMirror cm-s-default cm-s-inner CodeMirror-wrap"><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 22px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=""><span style="padding-right: 0.1px;"><span class="cm-variable-3">String</span> <span class="cm-variable">firstLine</span> <span class="cm-operator">=</span> <span class="cm-variable">scanner</span>.<span class="cm-variable">nextLine</span>();</span></pre></div></div></div></div></div></div></div></pre><p>执行完这行语句后，<code>firstLine</code> 的值为字符串 <code>&quot;000000000&quot;</code> ，即地形地图的第一行。</p><p>然后，我们再次使用 <code>nextLine()</code> 方法：</p><pre class="md-fences"> <div class="CodeMirror cm-s-default cm-s-inner CodeMirror-wrap"><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 22px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=""><span style="padding-right: 0.1px;"><span class="cm-variable-3">String</span> <span class="cm-variable">secondLine</span> <span class="cm-operator">=</span> <span class="cm-variable">scanner</span>.<span class="cm-variable">nextLine</span>();</span></pre></div></div></div></div></div></div></div></pre><p>这样我们就得到了地形地图的第二行，<code>secondLine</code> 的值是字符串 <code>&quot;000111000&quot;</code> 。</p><p>以此类推，我们可以获取到 <code>tile.txt</code> 中的所有数据。使用相同的方法可以再获得 <code>animal.txt</code> 中的数据。</p><p>最后，根据得到的数据，我们可以将地图输出到命令行中。</p><h4><a name='header-c118' class='md-header-anchor '></a>地图输出</h4><h5><a name='header-c119' class='md-header-anchor '></a>地图输出样例：</h5><p> <img src='https://cloud.githubusercontent.com/assets/6532225/18883810/5cf840c2-8517-11e6-804c-2c0d016973ed.png' alt='' /></p><blockquote><p>注：图片截取自 IntelliJ ，推荐同学们在写代码时使用 IntelliJ 编写、运行程序。</p><h5><a name='header-c125' class='md-header-anchor '></a>地图输出规则：</h5></blockquote><ol><li>地形输出：空地输出空格，小河输出&quot;水&quot;，陷阱输出&quot;陷&quot;，兽穴输出&quot;家&quot;。</li><li>动物输出：动物输出名字和数字，左方动物的数字在左侧，右方动物的数字在右侧。</li><li>如果一个位置上有动物，输出动物信息，不输出地形信息。</li></ol><h5><a name='header-c136' class='md-header-anchor '></a>地图对齐：</h5><p>由于同时使用了中文、数字和空格，地图的对齐并没有那么容易。</p><p>如果没有正确对齐，地图会变得奇怪，比如这样：</p><p><img src='https://cloud.githubusercontent.com/assets/6532225/18883812/5f2a8a1c-8517-11e6-8972-0738018dd6fb.png' alt='' /></p><p>因此，正确对齐地图是必要的。</p><h5><a name='header-c145' class='md-header-anchor '></a>地图对齐方式：</h5><p>每个地图上的格子，无论是动物还是地形，我们的输出都采用相同的格式：</p><blockquote><p>半角字符 + 全角字符 + 半角字符</p></blockquote><p>半角字符：半角字符一般包括英文字母、英文符号、数字和空格。在本项目中，我们的半角字符是空格或者数字。</p><p>全角字符：中文字符一般都是全角字符。</p><p>举例：</p><ol><li>地图最左上角的<code>6虎</code>，是由半角字符<code>6</code> + 全角字符<code>虎</code> + 半角字符<code></code>(空格)组成的。</li><li>地图中的<code>水</code>，是由半角空格 + 全角字符<code>水</code> + 半角空格组成的。</li><li>地图中的空地，是由半角空格 + 全角空格 + 半角空格组成的。</li></ol><blockquote><p>我们平时按空格打出的都是半角空格，关于全角空格，参考 <a href='https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjnk_288a_PAhULjZQKHTz6AnUQFggaMAA&url=%68%74%74%70%3a%2f%2f%62%61%69%6b%65%2e%62%61%69%64%75%2e%63%6f%6d%2f%76%69%65%77%2f%32%39%37%30%37%37%32%2e%68%74%6d&usg=AFQjCNFPsnamZ_pxCO8tgPmzjI4WjVM_sg&cad=rja'>全角空格_百度百科</a> 。</p></blockquote><h3><a name='header-c171' class='md-header-anchor '></a>二、游戏逻辑</h3><h4><a name='header-c172' class='md-header-anchor '></a>游戏规则</h4><p>参考：  <a href='www.doushouqi.net' target='_blank' >www.doushouqi.net</a></p><p><strong>斗兽棋的棋盘</strong>
+斗兽棋的棋盘横七列，纵九行，棋子放在格子中。双方底在线各有三个陷阱（作品字排）和一个兽穴(于品字中间)。 棋牌中部有两片水域，称之为小河。</p><p><strong>斗兽棋的棋子</strong>
+斗兽棋棋子共十六个，分为红蓝双方，双方各有八只一样的棋子（下称为：兽 或 动物），按照战斗力强弱排列为：象&gt;狮&gt;虎&gt;豹&gt;狗&gt;狼&gt;猫&gt;鼠。</p><p><strong>斗兽棋的走法</strong>
+游戏开始时，红方先走，然后轮流走棋。每次可走动一只兽，每只兽每次走一方格，除己方兽穴和小河以外，前后左右均可。但是，狮、虎、鼠还有不同走法：</p><p>狮虎跳河法：狮虎在小河边时，可以纵横对直跳过小河，且能把小河对岸的敌方较小的兽类吃掉，但是如果对方老鼠在河里，把跳的路线阻隔就不能跳，若对岸是对方比自己战斗力前的兽，也不可以跳过小河；</p><p>鼠游过河法：鼠是唯一可以走入小河的兽，走法同陆地上一样，每次走一格，上下左右均可，而且，陆地上的其他兽不可以吃小河中的鼠，小河中的鼠也不能吃陆地上的象，鼠类互吃不受小河影响。</p><p><strong>斗兽棋的吃法</strong>
+斗兽棋吃法分普通吃法和特殊此法，普通吃法是按照兽的战斗力强弱，强者可以吃弱者。
+特殊吃法如下：
+1、鼠吃象法：八兽的吃法除按照战斗力强弱次序外，惟鼠能吃象，象不能吃鼠。
+2、互吃法：凡同类相遇，可互相吃。
+3、陷阱：棋盘设陷阱，专为限制敌兽的战斗力（自己的兽，不受限制），敌兽走入陷阱，即失去战斗力，本方的任意兽类都可以吃去陷阱里的兽类。
+综合普通吃法和特殊吃法，将斗兽棋此法总结如下：</p><p>鼠可以吃象、鼠
+猫可以吃猫、鼠；
+狼可以吃狼、猫、鼠；
+狗可以吃狗、狼、猫、鼠；
+豹可以吃豹、狗、狼、猫、鼠；
+虎可以吃虎、豹、狗、狼、猫、鼠；
+狮可以吃狮、虎、豹、狗、狼、猫、鼠；
+象可以吃象、狮、虎、豹、狗、狼、猫；</p><blockquote><p><strong>注：</strong></p><p>本项目中，<strong>斗兽棋胜负判定</strong>只要求完成：</p><ol><li>任何一方的兽走入敌方的兽穴就算胜利（自己的兽类不可以走入自己的兽穴）；</li><li>任何一方的兽被吃光就算失败，对方获胜</li><li>任何一方所有活着的兽被对方困住，均不可移动时，就算失败，对方获胜；</li></ol><p>本项目不要求做无赖长杀、武松长杀、刷分等<strong>斗兽棋违例处理</strong></p></blockquote><h4><a name='header-c222' class='md-header-anchor '></a>游戏指令</h4><p>在命令行中，我们无法使用鼠标来控制，需要通过读取键盘输入来控制动物。</p><p>我们使用数字1-8来表示动物，wasd代表上下左右。</p><table><thead><tr><th>数字</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody><tr><td>含义</td><td>鼠</td><td>猫</td><td>狼</td><td>狗</td><td>豹</td><td>虎</td><td>狮</td><td>象</td></tr></tbody></table><table><thead><tr><th>字母</th><th>w</th><th>a</th><th>s</th><th>d</th></tr></thead><tbody><tr><td>含义</td><td>向上</td><td>向左</td><td>向下</td><td>向右</td></tr></tbody></table><p>举例：</p><table><thead><tr><th>指令</th><th>含义</th></tr></thead><tbody><tr><td>1d</td><td>鼠向右走一格</td></tr><tr><td>3w</td><td>狼向上走一格</td></tr><tr><td>6a</td><td>虎向左走一格(或向左跳过河)</td></tr><tr><td>7s</td><td>狮向下走一格(或向下跳过河)</td></tr><tr><td>9a</td><td>错误指令：9不对应任何动物</td></tr><tr><td>2b</td><td>错误指令：b不对应任何方向</td></tr><tr><td>1sd</td><td>错误指令：多余字符 &#39;d&#39;</td></tr></tbody></table><p>识别指令之后，根据指令移动动物。</p><p>有时动物按照规则可能不能执行指令，这时需要打印出不能执行的原因，让玩家重新输入指令。</p><p>样例：</p><p> <img src='https://cloud.githubusercontent.com/assets/6532225/18883835/77369402-8517-11e6-8960-3b52d76dacaa.png' alt='' /></p><h3><a name='header-c296' class='md-header-anchor '></a>三、游戏功能</h3><h4><a name='header-c297' class='md-header-anchor '></a>帮助</h4><p>玩家可以在游戏中任何时候输入<code>help</code>查看帮助。</p><p>样例：</p><p><img src='https://cloud.githubusercontent.com/assets/6532225/18883902/baa6862a-8517-11e6-8dca-3f26bd755a50.png' alt='' /></p><h4><a name='header-c304' class='md-header-anchor '></a>退出</h4><p>玩家可以输入<code>exit</code>退出游戏。</p><h4><a name='header-c307' class='md-header-anchor '></a>重新开始</h4><p>玩家可以输入<code>restart</code>来重新开始游戏。</p><h4><a name='header-c310' class='md-header-anchor '></a>悔棋</h4><p>玩家可以输入<code>undo</code>来悔棋。</p><p>样例：</p><p><img src='https://cloud.githubusercontent.com/assets/6532225/18883920/cd567f00-8517-11e6-9f88-f543dc55b5af.png' alt='' /></p><h4><a name='header-c317' class='md-header-anchor '></a>取消悔棋</h4><p>玩家可以输入<code>redo</code>来取消悔棋。</p><p>样例 (接上图)：</p><p><img src='https://cloud.githubusercontent.com/assets/6532225/18883921/cdfea0cc-8517-11e6-9583-ba9e82458656.png' alt='' /></p><h2><a name='header-c324' class='md-header-anchor '></a>项目评分</h2><p>本项目满分100分，包括三个部分：基础部分、进阶部分和综合评价部分。其中，基础部分70分，进阶部分10分，综合评价部分20分。 </p><h3><a name='header-c327' class='md-header-anchor '></a>基础部分</h3><table><thead><tr><th>基础部分</th><th>分数</th></tr></thead><tbody><tr><td>游戏地图：游戏能够读取地图并输出初始地图</td><td>10</td></tr><tr><td>游戏地图：地图输出格式始终正确</td><td>5</td></tr><tr><td>游戏指令：分辨指令格式的对错</td><td>2</td></tr><tr><td>游戏指令：正确识别动物移动(攻击)指令</td><td>3</td></tr><tr><td>游戏功能：帮助、退出</td><td>2</td></tr><tr><td>游戏功能：重新开始</td><td>3</td></tr><tr><td>游戏规则：动物不能走出地图边界</td><td>3</td></tr><tr><td>游戏规则：动物能按照规则移动至相邻空地</td><td>3</td></tr><tr><td>游戏规则：只有鼠能进出小河</td><td>3</td></tr><tr><td>游戏规则：只有虎、狮可以跳河</td><td>3</td></tr><tr><td>游戏规则：敌方鼠在虎、狮跳河路线中时，虎、狮不能跳河</td><td>2</td></tr><tr><td>游戏规则：己方动物不能进入己方兽穴</td><td>2</td></tr><tr><td>游戏规则：己方动物不能进入友方单位所在的格子</td><td>2</td></tr><tr><td>游戏规则：动物按照规则消灭敌方动物</td><td>5</td></tr><tr><td>游戏规则：动物不允许送死</td><td>2</td></tr><tr><td>游戏规则：双方轮流走子 (左方先走)</td><td>5</td></tr><tr><td>胜负判定：任何一方的兽走入敌方的兽穴</td><td>3</td></tr><tr><td>胜负判定：任何一方的兽被吃光</td><td>1</td></tr><tr><td>胜负判定：任何一方所有活着的兽被对方困住，均不可移动</td><td>1</td></tr><tr><td>游戏运行总体正常，符合相关描述，不会异常退出</td><td>10</td></tr><tr><td>总分</td><td>70</td></tr></tbody></table><h3><a name='header-c395' class='md-header-anchor '></a>进阶部分</h3><table><thead><tr><th>进阶部分</th><th>分数</th></tr></thead><tbody><tr><td>游戏功能：悔棋</td><td>6</td></tr><tr><td>游戏功能：取消悔棋</td><td>3</td></tr><tr><td>上传项目至GitHub个人仓库</td><td>1</td></tr><tr><td>总分</td><td>10</td></tr></tbody></table><h3><a name='header-c412' class='md-header-anchor '></a>综合评价部分</h3><table><thead><tr><th>综合评价部分</th><th>分数</th></tr></thead><tbody><tr><td>设计文档（包括但不限于程序结构设计与分析，主要函数的功能，简要描述如何使用你的程序，编程中遇到的问题和解决策略）</td><td>8</td></tr><tr><td>代码风格（包括但不限于命名规范，缩进与换行，代码可读性）</td><td>6</td></tr><tr><td>面试情况（能否清晰地解释程序结构，能否回答助教的问题等）</td><td>5</td></tr><tr><td>意见与建议（包括但不限于对PJ1，PJ2，Lab，课堂），可随设计文档一起提交</td><td>1</td></tr><tr><td>总分</td><td>20</td></tr></tbody></table><h2><a name='header-c432' class='md-header-anchor '></a>项目提交与面试</h2><h3><a name='header-c433' class='md-header-anchor '></a>提交截止时间</h3><p>本次课程项目提交截止时间为 <strong>2016 年 11 月 13 日 23:59</strong>。</p><p>建议同学们在截止时间前一周就将项目基本完成，以防来不及完成，或者来不及修正突然发现的 bug 。</p><h3><a name='header-c438' class='md-header-anchor '></a>提交方式</h3><p>请提交源代码、文档。源代码应以项目的形式提交。如有必要可以提交其他材料。</p><p>在截止时间之前将提交材料压缩并上传到：</p><pre class='md-fences mock-cm' style='display:block;position:relative'>ftp://10.142.141.33/classes/16/161 程序设计(戴开宇)/WORK_UPLOAD/PJ1</pre><p>压缩包请重命名为：<code>学号 + 姓名</code>。 如 <code>16302010001陈雷远.rar</code>，<code>16302010002李云帆.zip</code>。</p><p>如果发现之前提交的文件有问题，可以重新上传压缩包。ftp不允许删除或者覆盖文件，需要上传一个新的压缩包，命名格式为：<code>学号 + 姓名 + 次数</code>， 如<code>16302010002李云帆2.zip</code>。</p><h3><a name='header-c448' class='md-header-anchor '></a>迟交惩罚</h3><p>每迟交一天，最终得分扣除20%。</p><p>如：11月14日 00:01 AM 提交，扣除20%，11月16日 11:30 PM 提交，扣除60%。</p><blockquote><p>注：如果提交多次，以面试时选择的提交文件的提交时间为准。评分亦以此文件为准。</p></blockquote><h3><a name='header-c456' class='md-header-anchor '></a>面试注意事项</h3><p>本次课程项目面试时间为<strong>2016年 11月 15日 上午第三四节课</strong>，地点为机房，即Lab课组织面试。如有调整会提前通知。 </p><p>原则上面试时不允许现场Debug，请确保你的程序能正常运行。</p><h3><a name='header-c461' class='md-header-anchor '></a>抄袭惩罚</h3><p><strong>严禁任何形式的抄袭。</strong></p><p>助教将检查每个同学的代码、文档等材料，如有发现抄袭现象，将严肃处理。</p><p>抄袭同学零分处理。被抄袭同学将视情况作出惩罚。</p></div>
+</body>
+</html>
