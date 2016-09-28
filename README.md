@@ -148,7 +148,7 @@ String secondLine = scanner.nextLine();
 2. 地图中的` 水 `，是由半角空格 + 全角字符`水` + 半角空格组成的。
 3. 地图中的空地，是由半角空格 + 全角空格 + 半角空格组成的。
 
-> 我们平时按空格打出的都是半角空格，关于全角空格，参考 [全角空格_百度百科](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjnk_288a_PAhULjZQKHTz6AnUQFggaMAA&url=%68%74%74%70%3a%2f%2f%62%61%69%6b%65%2e%62%61%69%64%75%2e%63%6f%6d%2f%76%69%65%77%2f%32%39%37%30%37%37%32%2e%68%74%6d&usg=AFQjCNFPsnamZ_pxCO8tgPmzjI4WjVM_sg&cad=rja) 。
+> 我们平时按空格打出的都是半角空格，关于全角空格，参考 [全角空格_百度百科](http://baike.baidu.com/view/2970772.htm) 。
 
 ### 二、游戏逻辑
 
